@@ -1,30 +1,44 @@
-# React + TypeScript + Vite
+# Z Chat
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Stack
 
-Currently, two official plugins are available:
+### Testing
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Playwright](https://playwright.dev)
+[Vitest](https://vitest.dev/)
 
-## Expanding the ESLint configuration
+### Linting
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Prettier for formatting and linters for catching bugs!
 
-- Configure the top-level `parserOptions` property like this:
+[ESLint TS Config](https://typescript-eslint.io/users/configs)
+[Prettier](https://prettier.io/)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Workspace Structure
+
+```plaintext
+chat/
+├── src/
+│   ├── assets/              # Static assets like images, fonts, etc.
+│   ├── components/          # React components
+│   ├── pages/               # React page components
+│   ├── services/            # API services or other external services
+│   ├── styles/              # CSS or other styling files
+│   ├── utils/               # Utility functions
+│   ├── App.tsx              # Main React application component
+│   ├── index.tsx            # Entry point of the application
+│   ├── setupTests.ts        # Jest setup file
+├── tests/                    # Folder for automated tests
+│   ├── e2e/                  # End-to-end tests (Playwright)
+│   ├── unit/                 # Unit tests (Jest)
+├── public/                   # Public assets and static files
+│   ├── index.html            # HTML template
+├── .github/                  # GitHub Actions workflow configurations
+│   ├── workflows/            # GitHub Actions workflows
+│       ├── build.yml         # Example: CI/CD workflow
+├── vite.config.ts            # Vite configuration file
+├── tsconfig.json             # TypeScript configuration file
+├── jest.config.js            # Jest configuration file
+├── package.json              # NPM project configuration file
+└── README.md                 # Project documentation
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
