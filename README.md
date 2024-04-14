@@ -2,17 +2,23 @@
 
 ## Stack
 
+[Vite](https://vitejs.dev)
+[React](https://react.dev)
+[TypeScript](https://www.typescriptlang.org)
+
 ### Testing
 
 [Playwright](https://playwright.dev)
 [Vitest](https://vitest.dev/)
 
-### Linting
+### Linting and Formatting
 
 Prettier for formatting and linters for catching bugs!
 
 [ESLint TS Config](https://typescript-eslint.io/users/configs)
 [Prettier](https://prettier.io/)
+[Stylelint](https://stylelint.io/user-guide/configure)
+[Commitlint](https://commitlint.js.org)
 
 ## Workspace Structure
 

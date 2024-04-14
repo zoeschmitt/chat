@@ -18,11 +18,19 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
   "lint-staged": {
     "**/**.{ts,tsx}": "npm run lint",
+    "**/**.{css,scss}": "stylelint --allow-empty-input",
     "**/*": "prettier --write --ignore-unknown"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.2.2",
+    "@commitlint/config-conventional": "^19.2.2",
     "@playwright/test": "^1.43.1",
     "@types/node": "^20.12.7",
     "@types/react": "^18.2.66",
@@ -39,6 +47,11 @@
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "prettier": "3.2.5",
+    "sass": "^1.75.0",
+    "stylelint": "^16.3.1",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-order": "^6.0.4",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
     "vitest": "^1.5.0"
