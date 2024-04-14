@@ -18,7 +18,9 @@ Prettier for formatting and linters for catching bugs!
 [ESLint TS Config](https://typescript-eslint.io/users/configs)
 [Prettier](https://prettier.io/)
 [Stylelint](https://stylelint.io/user-guide/configure)
+[BEM](https://getbem.com)
 [Commitlint](https://commitlint.js.org)
+[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 
 ## Workspace Structure
 

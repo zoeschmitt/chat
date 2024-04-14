@@ -25,7 +25,7 @@
   },
   "lint-staged": {
     "**/**.{ts,tsx}": "npm run lint",
-    "**/**.{css,scss}": "stylelint --allow-empty-input",
+    "**/**.{css,scss}": "stylelint --allow-empty-input --fix",
     "**/*": "prettier --write --ignore-unknown"
   },
   "devDependencies": {
@@ -52,6 +52,7 @@
     "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-order": "^6.0.4",
+    "stylelint-selector-bem-pattern": "^4.0.0",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
     "vitest": "^1.5.0"
