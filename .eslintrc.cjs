@@ -17,16 +17,49 @@ module.exports = {
     project: ["./tsconfig.json", "./tsconfig.node.json"],
     tsconfigRootDir: __dirname,
   },
-  plugins: ["react-refresh"],
+  plugins: ["react-refresh", "simple-import-sort", "import"],
   rules: {
     "react-refresh/only-export-components": [
       "warn",
       { allowConstantExport: true },
     ],
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
   },
   settings: {
     react: {
       version: "detect",
     },
   },
+  overrides: [
+    {
+      files: ["**/*.js", "**/*.ts", "**/*.tsx"],
+      rules: {
+        "simple-import-sort/imports": [
+          "error",
+          {
+            groups: [
+              // `react` first, `next` second, then packages starting with a character
+              ["^react$", "^next", "^[a-z]"],
+              // Packages starting with `@`
+              ["^@"],
+              // Packages starting with `~`
+              ["^~"],
+              // Imports starting with `../`
+              ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+              // Imports starting with `./`
+              ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+              // Style imports
+              ["^.+\\.s?css$"],
+              // Side effect imports
+              ["^\\u0000"],
+            ],
+          },
+        ],
+      },
+    },
+  ],
 };
