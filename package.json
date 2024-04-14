@@ -11,7 +11,7 @@
     "test": "vitest && npx playwright test",
     "coverage": "vitest run --coverage",
     "test:e2e": "npx playwright test",
-    "test:unit": "vitest",
+    "test:unit": "vitest --run",
     "prepare": "husky"
   },
   "dependencies": {

@@ -2,25 +2,29 @@
 
 ## Stack
 
-[Vite](https://vitejs.dev)
-[React](https://react.dev)
-[TypeScript](https://www.typescriptlang.org)
+- [Vite](https://vitejs.dev)
+- [React](https://react.dev)
+- [TypeScript](https://www.typescriptlang.org)
 
 ### Testing
 
-[Playwright](https://playwright.dev)
-[Vitest](https://vitest.dev/)
+- [Playwright](https://playwright.dev)
+- [Vitest](https://vitest.dev/)
 
 ### Linting and Formatting
 
 Prettier for formatting and linters for catching bugs!
 
-[ESLint TS Config](https://typescript-eslint.io/users/configs)
-[Prettier](https://prettier.io/)
-[Stylelint](https://stylelint.io/user-guide/configure)
-[BEM](https://getbem.com)
-[Commitlint](https://commitlint.js.org)
-[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+- [ESLint for TypeScript](https://typescript-eslint.io)
+- [Prettier](https://prettier.io/)
+- [Stylelint](https://stylelint.io)
+- [BEM](https://getbem.com)
+- [Commitlint](https://commitlint.js.org)
+- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+
+### CI/CD
+
+- [Github Actions](https://docs.github.com/en/actions)
 
 ## Workspace Structure
 
