@@ -1,10 +1,20 @@
-@import "./styles/colors.scss";
-@import "./styles/flex.scss";
-@import "./styles/typography.scss";
-@import "./styles/position.scss";
+@import "./styles/colors";
+@import "./styles/flex";
+@import "./styles/typography";
+@import "./styles/position";
 
 :root {
+  --z-background: #{$color-background-light};
+  --z-foreground: #{$color-cod-gray};
+  --z-primary: #{$color-royal-blue};
+  --z-secondary: #{$color-persian-blue};
+  --z-tertiary: #{$color-gray};
+  --z-card-background: #{$color-card-light-gray};
+  --z-card-border: #{$color-card-border-light-gray};
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: var(--z-foreground);
+  background-color: var(--z-background);
 
   /* Calculated with https://modern-fluid-typography.vercel.app */
   font-size: clamp(1rem, 2vw + 1rem, 2.25rem);
@@ -22,4 +32,16 @@ body,
 #root {
   height: 100%;
   margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --z-background: #{$color-background-dark};
+    --z-foreground: #{$color-background-light};
+    --z-primary: #{$color-malibu};
+    --z-secondary: #{$color-anakiwa};
+    --z-tertiary: #{$color-light-gray};
+    --z-card-background: #{$color-card-dark-gray};
+    --z-card-border: #{$color-card-border-dark-gray};
+  }
 }

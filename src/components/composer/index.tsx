@@ -1,7 +1,7 @@
 import "./composer.scss";
 
 const Composer = () => {
-  return <>composer</>;
+  return <div className="composer">composer</div>;
 };
 
 export default Composer;

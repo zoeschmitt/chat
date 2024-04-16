@@ -9,11 +9,11 @@ import "./app.scss";
 const App = () => {
   return (
     <div className="app z-flex z-flex-row z-relative">
-      <div className="app__nav">
+      <div className="app__nav z-flex z-flex-col z-sticky">
         <Nav />
       </div>
       <div className="z-flex z-flex-col z-flex-1 z-relative">
-        <div className="z-flex z-flex-col z-relative app__main">
+        <div className="app__main z-flex z-flex-col z-relative">
           <div className="app__header z-sticky">
             <Header />
           </div>
