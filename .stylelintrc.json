@@ -21,5 +21,6 @@
       },
       "utilitySelectors": "^\\.util-[a-z]+$"
     }
-  }
+  },
+  "ignoreFiles": ["src/styles/colors.scss"]
 }
